@@ -77,8 +77,8 @@ const getAllProducts = async (req, res) => {
     const products = await result;
     res.status(200).json({
         msg: "Products Fetched Successfully",
-        products,
         nbHits: products.length,
+        products
     });
 };
 
