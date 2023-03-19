@@ -1,10 +1,10 @@
 /** The module imports the Mongoose model product that contains the schema and model definitions for products. */
-const product = require("../models/product");
+const Product = require("../models/product");
 
 /** This function fetches all the products from the database and sends the response back to the client with a success status code and message, number of hits (number of products retured) and the list of products. */
 const getAllProductsStatic = async (req, res) => {
     // throw new Error('Custom errorCustom error');
-    const products = await product.find({ price: { $gt: 30 } });
+    const products = await Product.find({ price: { $gt: 30 } });
     res.status(200).json({
         msg: "Products Fetched Successfully",
         nbHits: products.length,
@@ -28,7 +28,7 @@ const getAllProducts = async (req, res) => {
         queryObj.name = { $regex: name, $options: "i" };
     }
 
-    let result = product.find(queryObj);
+    let result = Product.find(queryObj);
 
     /** If sort is provided, the result variable is updated to sort the products according to the provided sort criteria. Otherwise, the default sort criteria is applied (i.e., by creation date). */
     if (sort) {
