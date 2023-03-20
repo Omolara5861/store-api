@@ -82,14 +82,19 @@ const getAllProducts = async (req, res) => {
     });
 };
 
+    /** This method retrieves a product from the database based on its id */
 const getProduct = async (req, res) => {
+    /** Store the id parameter from the request object in a variable */
     const {id} = req.params;
-    console.log(id)
+    /** Find the product in the database using the retrieved id */
     const product = await Product.findById({_id: id});
+    /** If the product is not found, return a 404 error message */
     if (!product) {
         res.status(404).json({msg: 'No product with the provided id'});
     }
+    /** If the product is found, return a 200 success status code along with the product data */
     res.status(200).json({msg: 'Product fetched successfully', nbHits: product.length, product})
 }
 
+/** Export methods so it can be accessible outside this file */
 module.exports = { getAllProducts, getAllProductsStatic, getProduct };
