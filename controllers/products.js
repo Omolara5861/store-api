@@ -82,4 +82,14 @@ const getAllProducts = async (req, res) => {
     });
 };
 
-module.exports = { getAllProducts, getAllProductsStatic };
+const getProduct = async (req, res) => {
+    const {id} = req.params;
+    console.log(id)
+    const product = await Product.findById({_id: id});
+    if (!product) {
+        res.status(404).json({msg: 'No product with the provided id'});
+    }
+    res.status(200).json({msg: 'Product fetched successfully', nbHits: product.length, product})
+}
+
+module.exports = { getAllProducts, getAllProductsStatic, getProduct };
