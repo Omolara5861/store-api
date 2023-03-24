@@ -1,10 +1,10 @@
 /** The module imports the Mongoose model product that contains the schema and model definitions for products. */
 const Product = require("../models/product");
 
-/** This function fetches all the products from the database and sends the response back to the client with a success status code and message, number of hits (number of products retured) and the list of products. */
+/** This function fetches all the products from the database and sends the response back to the client with a success status code and message, number of hits (number of products returned) and the list of products. */
 const getAllProductsStatic = async (req, res) => {
     // throw new Error('Custom errorCustom error');
-    const products = await Product.find({ price: { $gt: 30 } });
+    const products = await Product.find({});
     res.status(200).json({
         msg: "Products Fetched Successfully",
         nbHits: products.length,
