@@ -29,6 +29,32 @@ This endpoint retrieves 10 products from the store / database by default, if lim
 ### Response
 The response would include an array of products, as well as the number or length of products returned.
 
+```json
+{
+    "msg": "Products fetched successfully",
+    "nbHits": 2,
+    "products": [
+        {
+            "_id": "60d09ef85f01c41a387af27f",
+            "name": "Product 1",
+            "price": 200,
+            "featured": true,
+            "company": "Company A",
+            "createdAt": "2023-04-03T14:20:40.589Z",
+            "rating": 4.5
+        },
+         {
+            "_id": "60d09ef85f01c41a387af280",
+            "name": "Product 2",
+            "price": 300,
+            "featured": false,
+            "company": "Company B",
+            "createdAt": "2023-04-03T14:20:40.589Z",
+            "rating": 3.8
+         }
+    ]
+}
+```
 
 ### Get a single product
 ```
