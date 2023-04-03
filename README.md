@@ -47,3 +47,17 @@ The response will include the product object
 
 5. Start the server:
    `npm start`
+
+
+## Contributing
+If you find a bug or have a feature request, please open an issue on the GitHub repository.
+
+If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository
+2. Create a new branch for your feature: `git checkout -b feature-name`
+3. Make your changes and commit them: `git commit -m "Add feature name"`
+4. Push your changes to your forked repository: `git push origin feature-name`
+5. Create a pull request on the original repository.
+
+Please make sure your code is well commented.
