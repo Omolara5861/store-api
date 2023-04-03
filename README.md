@@ -28,3 +28,22 @@ This endpoint retrieves a single product by ID from the database / store.
 Response
 The response will include the product object
 
+
+## Installation
+1. Clone the repository:
+   `git clone https:github.com/omolara5861/store-api.git`
+
+2. Install the dependencies:
+   `cd store-api && npm install`
+
+3. Set up the environment variables:
+   Create a `.env` file int he root directory and set the following variables:
+   `MONGODB_URI = <your_mongodb_uri>
+   PORT = <port_number>
+   `
+
+4. Dynamically add products to database:
+   `node populate.js`
+
+5. Start the server:
+   `npm start`
