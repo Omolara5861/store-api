@@ -11,11 +11,19 @@ This endpoint retrieves all products available in the store / database.
 This endpoint retrieves 10 products from the store / database by default, if limit is set then it returns the number set.
 
 ##### Query Parameters
+| Parameter | Type | Description |
+  ---------   ----   -----------
+| `page`    | number | The page number of products to return (default: 1) |
+| `limit`   | number | The number of products per page (default: 10) |
+| `sort`    | string | The field and order to sort the products. Use MongoDB's ::__**sort method**__:: format. (example: `{price: 1}` to sort by price in ascending order, or `{rating: -1}` for descending order)
+| `featured` | boolean | Returns only featured products |
+| `company` | string | Returns only products by the company provided |
+| `name` | string | Returns products that the name property includes the name provided |
+| `fields` | string | Returns only products with the properties of the field provided. Multiple fields can be comma-separated. (example: `name, price, company`) |
 
 
 #### Response
 The response would include an array of products, as well as the number or length of products returned.
-
 
 
 ### Get a single product
