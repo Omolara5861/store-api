@@ -70,6 +70,20 @@ This endpoint retrieves a single product by ID from the database / store.
 ### Response
 The response will include the product object
 
+```json
+{
+   "msg": "Product fetched successfully",
+   "product": [{
+       "_id": "60d09ef85f01c41a387af27f",
+       "name": "Product 1",
+       "price": 200,
+       "featured": true,
+       "company": "Company A",
+       "createdAt": "2023-04-03T14:20:40.589Z",
+       "rating": 4.5
+   }]
+}
+```
 
 ## Installation
 1. Clone the repository:
