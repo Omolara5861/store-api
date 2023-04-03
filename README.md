@@ -3,58 +3,73 @@ This API is built with Node.js, Express, MongoDB, and Mongoose to provide a simp
 
 ## Endpoints
 ### Get all static products
-`GET /api/static/products`
+```
+GET /api/static/products
+```
 This endpoint retrieves all products available in the store / database.
 
 ### Get all products
-`Get /api/products`
+```
+Get /api/products
+```
 This endpoint retrieves 10 products from the store / database by default, if limit is set then it returns the number set.
 
-##### Query Parameters
+### Query Parameters
 | Parameter | Type | Description |
   ---------   ----   -----------
 | `page`    | number | The page number of products to return (default: 1) |
 | `limit`   | number | The number of products per page (default: 10) |
-| `sort`    | string | The field and order to sort the products. Use MongoDB's ::__**sort method**__:: format. (example: `{price: 1}` to sort by price in ascending order, or `{rating: -1}` for descending order)
+| `sort`    | string | The field and order to sort the products. Use MongoDB's __sort method__ format. (example: `{price: 1}` to sort by price in ascending order, or `{rating: -1}` for descending order)
 | `featured` | boolean | Returns only featured products |
 | `company` | string | Returns only products by the company provided |
 | `name` | string | Returns products that the name property includes the name provided |
 | `fields` | string | Returns only products with the properties of the field provided. Multiple fields can be comma-separated. (example: `name, price, company`) |
 
 
-#### Response
+### Response
 The response would include an array of products, as well as the number or length of products returned.
 
 
 ### Get a single product
-`GET /api/v1/products/:id`
+```
+GET /api/v1/products/:id
+```
 This endpoint retrieves a single product by ID from the database / store.
 
-##### Parameters
+### Parameters
 
 
-Response
+### Response
 The response will include the product object
 
 
 ## Installation
 1. Clone the repository:
-   `git clone https:github.com/omolara5861/store-api.git`
+   ```
+   git clone https:github.com/omolara5861/store-api.git
+   ```
 
 2. Install the dependencies:
-   `cd store-api && npm install`
+   ```
+   cd store-api && npm install
+   ```
 
 3. Set up the environment variables:
    Create a `.env` file int he root directory and set the following variables:
-   `MONGODB_URI = <your_mongodb_uri>
+   ```
+   MONGODB_URI = <your_mongodb_uri>
    PORT = <port_number>
-   `
+   ```
 
 4. Dynamically add products to database:
-   `node populate.js`
+   ```
+   node populate.js
+   ```
 
 5. Start the server:
-   `npm start`
+   ````
+   npm start
+   ````
 
 
 ## Contributing
