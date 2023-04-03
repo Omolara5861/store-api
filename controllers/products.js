@@ -93,7 +93,7 @@ const getProduct = async (req, res) => {
         res.status(404).json({msg: 'No product with the provided id'});
     }
     /** If the product is found, return a 200 success status code along with the product data */
-    res.status(200).json({msg: 'Product fetched successfully', nbHits: product.length, product})
+    res.status(200).json({msg: 'Product fetched successfully', product});
 }
 
 /** Export methods so it can be accessible outside this file */
