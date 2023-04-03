@@ -8,4 +8,23 @@ This endpoint retrieves all products available in the store / database.
 
 ### Get all products
 `Get /api/products`
-This endpoint retrieves 10 products from the store / database by default, if limit is set then it returns the number set
+This endpoint retrieves 10 products from the store / database by default, if limit is set then it returns the number set.
+
+##### Query Parameters
+
+
+#### Response
+The response would include an array of products, as well as the number or length of products returned.
+
+
+
+### Get a single product
+`GET /api/v1/products/:id`
+This endpoint retrieves a single product by ID from the database / store.
+
+##### Parameters
+
+
+Response
+The response will include the product object
+
