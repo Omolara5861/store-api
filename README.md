@@ -63,9 +63,9 @@ GET /api/v1/products/:id
 This endpoint retrieves a single product by ID from the database / store.
 
 ### Parameters
-| Parameter | Type | Description |
-  --------    ----   -----------
-|  `id`     | string | The ID of the product. |
+| Parameter | Type   | Description            |
+|-----------|--------|------------------------|
+| `id`      | string | The ID of the product. |
 
 ### Response
 The response will include the product object
