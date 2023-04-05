@@ -1,12 +1,16 @@
 # Store API
 This API is built with Node.js, Express, MongoDB, and Mongoose to provide a simple store API that includes features such as pagination, search, sort, and numeric filters.
+<br />
 
 ## Endpoints
+
 ### Get all static products
 ```
 GET /api/static/products
 ```
 This endpoint retrieves all products available in the store / database.
+
+<br />
 
 ### Get all products
 ```
@@ -54,6 +58,7 @@ The response would include an array of products, as well as the number or length
     ]
 }
 ```
+<br />
 
 ### Get a single product
 ```
@@ -84,6 +89,8 @@ The response will include the product object
 }
 ```
 
+<br />
+
 ## Installation
 1. Clone the repository:
    ```
@@ -112,6 +119,8 @@ The response will include the product object
    npm start
    ````
 
+
+<br />
 
 ## Contributing
 If you find a bug or have a feature request, please open an issue on the GitHub repository.
