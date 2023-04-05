@@ -1,5 +1,14 @@
 # Store API
+
+[![LICENSE](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
 This API is built with Node.js, Express, MongoDB, and Mongoose to provide a simple store API that includes features such as pagination, search, sort, and numeric filters.
+
+## Documentation
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/18030526-a717aa2b-7353-4bbc-8809-eac21760e737?action=collection%2Ffork&collection-url=entityId%3D18030526-a717aa2b-7353-4bbc-8809-eac21760e737%26entityType%3Dcollection%26workspaceId%3Dbb9ada3e-bb74-4fbc-86ad-0d4067495471)
+> API Documentation in postman \
+> NOTE: For test fork this postman collection
+
 <br />
 
 ## Endpoints
