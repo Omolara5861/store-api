@@ -13,13 +13,13 @@ This API is built with Node.js, Express, MongoDB, and Mongoose to provide a simp
 
 ### Get all static products
 ```js
-GET /api/static/products
+GET /api/v1/static/products
 ```
 This endpoint retrieves all products available in the store / database.
 
 ### Get all products
 ```js
-Get /api/products
+GET /api/v1/products
 ```
 This endpoint retrieves 10 products from the store / database by default, if limit is set then it returns the number set.
 
