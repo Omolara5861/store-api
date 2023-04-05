@@ -38,23 +38,25 @@ The response would include an array of products, as well as the number or length
     "nbHits": 2,
     "products": [
         {
-            "_id": "60d09ef85f01c41a387af27f",
-            "name": "Product 1",
-            "price": 200,
-            "featured": true,
-            "company": "Company A",
-            "createdAt": "2023-04-03T14:20:40.589Z",
-            "rating": 4.5
-        },
-         {
-            "_id": "60d09ef85f01c41a387af280",
-            "name": "Product 2",
-            "price": 300,
             "featured": false,
-            "company": "Company B",
-            "createdAt": "2023-04-03T14:20:40.589Z",
-            "rating": 3.8
-         }
+            "rating": 4.5,
+            "createdAt": "2023-03-14T09:00:49.460Z",
+            "_id": "641037cbcd55415fc04a29ea",
+            "name": "leather sofa",
+            "price": "99",
+            "company": "caressa",
+            "__v": 0
+        },
+        {
+            "featured": true,
+            "rating": 4.5,
+            "createdAt": "2023-03-14T09:00:49.460Z",
+            "_id": "641037cbcd55415fc04a29e9",
+            "name": "high-back bench",
+            "price": "39",
+            "company": "ikea",
+            "__v": 0
+        }
     ]
 }
 ```
@@ -76,16 +78,17 @@ The response will include the product object
 
 ```json
 {
-   "msg": "Product fetched successfully",
-   "product": [{
-       "_id": "60d09ef85f01c41a387af27f",
-       "name": "Product 1",
-       "price": 200,
-       "featured": true,
-       "company": "Company A",
-       "createdAt": "2023-04-03T14:20:40.589Z",
-       "rating": 4.5
-   }]
+    "msg": "Product fetched successfully",
+    "product": {
+        "featured": false,
+        "rating": 4.6,
+        "createdAt": "2023-03-14T09:00:49.460Z",
+        "_id": "641037cbcd55415fc04a29e5",
+        "name": "bar stool",
+        "price": "40",
+        "company": "liddy",
+        "__v": 0
+    }
 }
 ```
 
