@@ -9,8 +9,6 @@ This API is built with Node.js, Express, MongoDB, and Mongoose to provide a simp
 > API Documentation in postman \
 > NOTE: For test fork this postman collection
 
-<br />
-
 ## Endpoints
 
 ### Get all static products
@@ -18,8 +16,6 @@ This API is built with Node.js, Express, MongoDB, and Mongoose to provide a simp
 GET /api/static/products
 ```
 This endpoint retrieves all products available in the store / database.
-
-<br />
 
 ### Get all products
 ```
@@ -68,8 +64,7 @@ The response would include an array of products, as well as the number or length
         }
     ]
 }
-```
-<br />
+``
 
 ### Get a single product
 ```
@@ -101,8 +96,6 @@ The response will include the product object
 }
 ```
 
-<br />
-
 ## Installation
 1. Clone the repository:
    ```
@@ -132,8 +125,6 @@ The response will include the product object
    ````
 
 
-<br />
-
 ## Contributing
 If you find a bug or have a feature request, please open an issue on the GitHub repository.
 
@@ -146,8 +137,6 @@ If you would like to contribute to this project, please follow these steps:
 5. Create a pull request on the original repository.
 
 Please make sure your code is well commented.
-
-<br />
 
 ## License
 This software is licensed under the
