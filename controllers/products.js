@@ -59,13 +59,13 @@ const getAllProducts = async (req, res) => {
       (match) => `-${operatorsMap[match]}-`
     )
     const options = ['price', 'rating']
+    // eslint-disable-next-line no-unused-vars
     filters = filters.split(',').forEach((item) => {
       const [field, operator, value] = item.split('-')
       if (options.includes(field)) {
         queryObj[field] = { [operator]: Number(value) }
       }
     })
-    return filters
   }
 
   /** The page and limit parameters are extracted from the request object to set up pagination. The result variable is updated to skip the appropriate number of records and limit the results to the specified number of records per page. */
