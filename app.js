@@ -6,7 +6,6 @@ const app = express()
 
 const errorMiddleware = require('./middleware/error-handler')
 const notFoundMiddleware = require('./middleware/not-found')
-
 const productRouter = require('./routes/products')
 
 const connectDB = require('./db/connect')
