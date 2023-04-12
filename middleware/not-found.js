@@ -1,3 +1,7 @@
-const notFound = (req, res) => res.status(404).send('Route does not exist')
+const createError = require('http-errors');
+
+
+const notFound = (req, res, next) => { next(createError(404, 'Route does not exist')) }
 
 module.exports = notFound
+
