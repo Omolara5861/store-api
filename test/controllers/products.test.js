@@ -17,7 +17,9 @@ describe('Store API Test', () => {
   it('Returns 10 products from the database', async () => {
     const res = await req(app).get('/api/v1/products')
     expect(res.statusCode).toBe(200)
-    expect(res.length).toBeGreaterThan(0)
+    expect(res.body.msg).toBe('Products Fetched Successfully')
+    expect(res.body.data.length).toBeGreaterThan(0)
+    expect(res.body.data.length).toBe(10)
   })
 })
 
