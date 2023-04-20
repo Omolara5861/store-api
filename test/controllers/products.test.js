@@ -14,7 +14,7 @@ beforeAll(async () => {
 })
 
 describe('Store API Test', () => {
-  it('Returns 10 products from the database', async () => {
+  it('Successfully returns 10 products from the database', async () => {
     const res = await req(app).get('/api/v1/products')
     expect(res.statusCode).toBe(200)
     expect(res.body.msg).toBe('Products Fetched Successfully')
