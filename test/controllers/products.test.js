@@ -14,6 +14,14 @@ beforeAll(async () => {
 })
 
 describe('Store API Test', () => {
+  it('Sucessfully returns all products in the database', async () => {
+    const res = await req(app).get('/api/v1/products/static')
+    expect(res.statusCode).toBe(200)
+    expect(res.body.data.length).toBeGreaterThan(10)
+    expect(res.body.data.length).toEqual(23)
+    expect(res.body.msg).toBe('Products Fetched Successfully')
+  })
+
   it('Successfully returns 10 products from the database', async () => {
     const res = await req(app).get('/api/v1/products')
     expect(res.statusCode).toBe(200)
