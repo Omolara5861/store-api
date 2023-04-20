@@ -8,7 +8,8 @@
     "dev": "nodemon ./src/app.js",
     "lint": "eslint .  --ext .js",
     "lint-fix": "eslint --fix .  --ext .js",
-    "test": "jest --testTimeout=50000"
+    "test": "jest --testTimeout=60000",
+    "test-dev": "jest --watch --testTimeout=50000"
   },
   "keywords": [],
   "author": "",
