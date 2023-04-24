@@ -40,6 +40,14 @@ describe('Store API Test', () => {
     expect(res.body.data).toHaveProperty('rating')
     expect(res.body.data).toHaveProperty('price')
   })
+
+  it('Throws an error when no product match the provided ID', async () => {
+    const ID = '64369c4592d3643be4872682'
+    const res = await req(app).get(`/api/v1/products/${ID}`)
+    expect(res.statusCode).toBe(404)
+    expect(res.body).not.toHaveProperty('data')
+    expect(res.body.msg).toBe(`No product with the provided id '${ID}'`)
+  })
 })
 
 afterAll(async () => await mongoose.connection.close())
