@@ -29,6 +29,17 @@ describe('Store API Test', () => {
     expect(res.body.data.length).toBeGreaterThan(0)
     expect(res.body.data.length).toBe(10)
   })
+
+  it('Successfully returns the product with the requested ID', async () => {
+    const ID = '64369c4582d3643be4872682'
+    const res = await req(app).get(`/api/v1/products/${ID}`)
+    expect(res.statusCode).toBe(200)
+    expect(res.body.msg).toBe('Product fetched successfully')
+    expect(res.body.data.length).not.toBe(0)
+    expect(res.body.data).toHaveProperty('name')
+    expect(res.body.data).toHaveProperty('rating')
+    expect(res.body.data).toHaveProperty('price')
+  })
 })
 
 afterAll(async () => await mongoose.connection.close())
