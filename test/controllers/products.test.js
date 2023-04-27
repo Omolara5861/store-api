@@ -36,6 +36,7 @@ describe('Store API Test', () => {
     expect(res.statusCode).toBe(200)
     expect(res.body.msg).toBe('Product fetched successfully')
     expect(res.body.data.length).not.toBe(0)
+    expect(res.body.data.length).toBe(1)
     expect(res.body.data).toHaveProperty('name')
     expect(res.body.data).toHaveProperty('rating')
     expect(res.body.data).toHaveProperty('price')
