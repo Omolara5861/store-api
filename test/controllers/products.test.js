@@ -39,6 +39,7 @@ describe('Store API Test', () => {
     expect(res.body.data).toHaveProperty('name')
     expect(res.body.data).toHaveProperty('rating')
     expect(res.body.data).toHaveProperty('price')
+    expect(res.body.data).toHaveProperty('createdAt')
   })
 
   it('Throws an error when no product match the provided ID', async () => {
